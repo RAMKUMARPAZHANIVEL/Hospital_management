@@ -1,0 +1,148 @@
+{
+
+"doctor": [
+    {
+        "key": "DoctorId",
+        "type": "keyid",
+        "UIComponentTitle": "Doctor"
+    }
+        ,{
+        "key": "DoctorImage",
+        "label": "Doctor Image",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG,.PDF,.TXT,.DOC,.DOCX,.XLS,.XLSX",
+        "width": "30%",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "FullName",
+        "label": "Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Experience",
+        "label": "Experience",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "About",
+        "label": "About",
+        "type": "textarea",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "RegistrationNumber",
+        "label": "Registration Number",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isNumber"
+, "isPositive"
+        ]
+                            }
+],
+"Address": [
+      {
+            "key": "AddressId",
+            "type": "keyid",
+            "UIComponentTitle": "Address"
+      },
+      {
+        "key": "Country",
+        "label": "Country",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Address",
+        "label": "Address",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "City",
+        "label": "City",
+        "type": "text",
+        "editable": true,
+        "validators": [
+        ]
+                            }
+    ,{
+        "key": "PostalCode",
+        "label": "Postal Code",
+        "type": "text",
+        "editable": true,
+        "validators": [
+              "isNumber"
+            , "isPositive"
+        ]
+                            }
+     ,{
+        "key": "State",
+        "label": "State",
+        "type": "text",
+        "editable": true,
+        "validators": [
+        ]
+                            }
+],
+"qualification": [
+                        {
+                            "key": "QualificationId",
+                            "type": "keyid",
+                            "UIComponentTitle": "Qualifications",
+                            "child": true,
+                            "parent": "Doctor",
+                            "property": "Qualifications",
+                            "values": []
+                        },
+                        {
+                            "key": "Degree",
+                            "label": "Degree",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Degree is required"
+                            ]
+                        },
+                        {
+                            "key": "University",
+                            "label": "University",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "University is required"
+                            ]
+                        },
+                        {
+                            "key": "YearOfCompletion",
+                            "label": "Year Of Completion",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                    "isNumber"
+                                , "isPositive"
+                            ]
+                        }
+        ]
+}

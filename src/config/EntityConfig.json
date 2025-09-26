@@ -1,0 +1,1438 @@
+{
+        "prescription": [
+                        {
+                            "key": "PrescriptionId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "NextVisit",
+                            "label": "NextVisit",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "NextVisit is required"
+                            ]
+                        },
+                        {
+                            "key": "Symptoms",
+                            "label": "Symptoms",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Symptoms is required"
+                            ]
+                        },
+                        {
+                            "key": "Advice",
+                            "label": "Advice",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Advice is required"
+                            ]
+                        },
+                    {
+                        "key": "PrescriptionItems",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "PrescriptionLabTests",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "availability": [
+                        {
+                            "key": "AvailabiltyId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Type",
+                            "label": "Type",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.BookingType",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Type is required"
+                            ]
+                        },
+                        {
+                            "key": "DayOfWeek",
+                            "label": "DayOfWeek",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.Day",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "DayOfWeek is required"
+                            ]
+                        },
+                        {
+                            "key": "SpecificDate",
+                            "label": "SpecificDate",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "SpecificDate is required"
+                            ]
+                        },
+                    {
+                        "key": "AvailabilityDoctor",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AvailabilitySlots",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "appointment": [
+                        {
+                            "key": "AppointmentId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Date",
+                            "label": "Date",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Date is required"
+                            ]
+                        },
+                        {
+                            "key": "Notes",
+                            "label": "Notes",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Notes is required"
+                            ]
+                        },
+                        {
+                            "key": "StartTime",
+                            "label": "StartTime",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.TimeOfDay",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "StartTime is required"
+                            ]
+                        },
+                        {
+                            "key": "Status",
+                            "label": "Status",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.AppointmentStatus",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Status is required"
+                            ]
+                        },
+                        {
+                            "key": "Complaints",
+                            "label": "Complaints",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Complaints is required"
+                            ]
+                        },
+                        {
+                            "key": "EndTime",
+                            "label": "EndTime",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.TimeOfDay",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "EndTime is required"
+                            ]
+                        },
+                    {
+                        "key": "AppointmentBookedBy",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentConsultedDoctor",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentAppointmentReview",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentIssuedPrescription",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentDocuments",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "Documents",
+                        "label": "Documents",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "multiple": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Appointment Documents is required"
+                        ]
+                    },
+                                    {
+                        "key": "AppointmentPaymentDetails",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentAppointmentChatroom",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentReminders",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentReferToOtherDoctor",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "AppointmentAllotedSlot",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "reminder": [
+                        {
+                            "key": "ReminderId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Message",
+                            "label": "Message",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Message is required"
+                            ]
+                        },
+                        {
+                            "key": "RemindAt",
+                            "label": "RemindAt",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.DateTimeOffset",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "RemindAt is required"
+                            ]
+                        },
+                        {
+                            "key": "SentAt",
+                            "label": "SentAt",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.DateTimeOffset",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "SentAt is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsSent",
+                            "label": "IsSent",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsSent is required"
+                            ]
+                        },
+                        {
+                            "key": "Type",
+                            "label": "Type",
+                            "type": "dropdown",
+                                "valueId": "Value",
+                                "nameId": "Name",
+                                "contentId": "Name",
+                                "source": "Model.ReminderType",
+                                "editable": true,
+                                "validators": [
+                                    "required",
+                                    "isNumber"
+                                ],
+                                "validationMessages": [
+                                    "Type is required"
+                                ]
+                            }
+        ]
+,        "specialtycategory": [
+                        {
+                            "key": "Name",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Description",
+                            "label": "Description",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "Description is required"
+                                ]
+                            }
+        ]
+,        "chatmessage": [
+                        {
+                            "key": "ChatMessageId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Content",
+                            "label": "Content",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Content is required"
+                            ]
+                        },
+                        {
+                            "key": "SentAt",
+                            "label": "SentAt",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.DateTimeOffset",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "SentAt is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsRead",
+                            "label": "IsRead",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsRead is required"
+                            ]
+                        },
+                        {
+                            "key": "SenderId",
+                            "label": "SenderId",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "SenderId is required"
+                            ]
+                        },
+                        {
+                            "key": "ReceiverId",
+                            "label": "ReceiverId",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "ReceiverId is required"
+                                ]
+                            }
+        ]
+,        "chatroom": [
+                        {
+                            "key": "ChatroomId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "CreatedAt",
+                            "label": "CreatedAt",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.DateTimeOffset",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CreatedAt is required"
+                            ]
+                        },
+                        {
+                            "key": "ExpiresAt",
+                            "label": "ExpiresAt",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.DateTimeOffset",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ExpiresAt is required"
+                            ]
+                        },
+                    {
+                        "key": "ChatroomChats",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "patient": [
+                        {
+                            "key": "PatientId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "EmergencyContact",
+                            "label": "EmergencyContact",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "EmergencyContact is required"
+                            ]
+                        },
+                        {
+                            "key": "Address",
+                            "label": "Address",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.Address",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Address is required"
+                            ]
+                        },
+                        {
+                            "key": "MedicalInformation",
+                            "label": "MedicalInformation",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.MedicalInformation",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "MedicalInformation is required"
+                            ]
+                        },
+                        {
+                            "key": "FullName",
+                            "label": "FullName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "FullName is required"
+                            ]
+                        },
+                        {
+                            "key": "Age",
+                            "label": "Age",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Age is required"
+                            ]
+                        },
+                        {
+                            "key": "DateOfBirth",
+                            "label": "DateOfBirth",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfBirth is required"
+                            ]
+                        },
+                        {
+                            "key": "Gender",
+                            "label": "Gender",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.Gender",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Gender is required"
+                            ]
+                        },
+                        {
+                            "key": "PhoneNumber",
+                            "label": "PhoneNumber",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "PhoneNumber is required"
+                            ]
+                        },
+                        {
+                            "key": "Email",
+                            "label": "Email",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Email is required"
+                            ]
+                        },
+                    {
+                        "key": "PatientProfilePicture",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "ProfilePicture",
+                        "label": "ProfilePicture",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Patient ProfilePicture is required"
+                        ]
+                    },
+                                    {
+                        "key": "PatientAppointments",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "PatientChatrooms",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "doctor": [
+                        {
+                            "key": "DoctorId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                        {
+                            "key": "Experience",
+                            "label": "Experience",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Experience is required"
+                            ]
+                        },
+                        {
+                            "key": "About",
+                            "label": "About",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "About is required"
+                            ]
+                        },
+                        {
+                            "key": "RegistrationNumber",
+                            "label": "RegistrationNumber",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int64",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "RegistrationNumber is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsApprovedByClinic",
+                            "label": "IsApprovedByClinic",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsApprovedByClinic is required"
+                            ]
+                        },
+                        {
+                            "key": "ConsultationFee",
+                            "label": "ConsultationFee",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ConsultationFee is required"
+                            ]
+                        },
+                        {
+                            "key": "ReviewCount",
+                            "label": "ReviewCount",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ReviewCount is required"
+                            ]
+                        },
+                        {
+                            "key": "OverallRating",
+                            "label": "OverallRating",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "OverallRating is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsWeekly",
+                            "label": "IsWeekly",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsWeekly is required"
+                            ]
+                        },
+                        {
+                            "key": "DateOfJoining",
+                            "label": "DateOfJoining",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfJoining is required"
+                            ]
+                        },
+                    {
+                        "key": "DoctorQualifications",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "DoctorPatientAppointments",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "DoctorDoctorImage",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "DoctorImage",
+                        "label": "DoctorImage",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Doctor DoctorImage is required"
+                        ]
+                    },
+                                    {
+                        "key": "DoctorAvailabilities",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "DoctorPayments",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "DoctorDoctorChatrooms",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "DoctorCertifications",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "Certifications",
+                        "label": "Certifications",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "multiple": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Doctor Certifications is required"
+                        ]
+                    },
+                                    {
+                        "key": "DoctorWeeklyScheduleByDays",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "DoctorSpeciality",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "review": [
+                        {
+                            "key": "ReviewId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Rating",
+                            "label": "Rating",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Rating is required"
+                            ]
+                        },
+                        {
+                            "key": "Feedback",
+                            "label": "Feedback",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Feedback is required"
+                            ]
+                        },
+                    {
+                        "key": "ReviewReviewedAppointment",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "notification": [
+                        {
+                            "key": "NotificationId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Message",
+                            "label": "Message",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Message is required"
+                            ]
+                        },
+                        {
+                            "key": "CreatedAt",
+                            "label": "CreatedAt",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.DateTimeOffset",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "CreatedAt is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsRead",
+                            "label": "IsRead",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsRead is required"
+                            ]
+                        },
+                        {
+                            "key": "Type",
+                            "label": "Type",
+                            "type": "dropdown",
+                                "valueId": "Value",
+                                "nameId": "Name",
+                                "contentId": "Name",
+                                "source": "Model.NotificationType",
+                                "editable": true,
+                                "validators": [
+                                    "required",
+                                    "isNumber"
+                                ],
+                                "validationMessages": [
+                                    "Type is required"
+                                ]
+                            }
+        ]
+,        "specialty": [
+                        {
+                            "key": "DocSpeId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                        {
+                            "key": "Description",
+                            "label": "Description",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Description is required"
+                            ]
+                        },
+                    {
+                        "key": "SpecialtyAvailableDocs",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "SpecialtyCategory",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "clinic": [
+                        {
+                            "key": "ClinicId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "ClinicName",
+                            "label": "ClinicName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ClinicName is required"
+                            ]
+                        },
+                        {
+                            "key": "Address",
+                            "label": "Address",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.Address",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Address is required"
+                            ]
+                        },
+                        {
+                            "key": "MapUrl",
+                            "label": "MapUrl",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "MapUrl is required"
+                            ]
+                        },
+                        {
+                            "key": "LogoName",
+                            "label": "LogoName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "LogoName is required"
+                            ]
+                        },
+                    {
+                        "key": "ClinicDoctors",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "weekday": [
+                        {
+                            "key": "WeekdayId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "DayName",
+                            "label": "DayName",
+                            "type": "dropdown",
+                                "valueId": "Value",
+                                "nameId": "Name",
+                                "contentId": "Name",
+                                "source": "Model.Day",
+                                "editable": true,
+                                "validators": [
+                                    "required",
+                                    "isNumber"
+                                ],
+                                "validationMessages": [
+                                    "DayName is required"
+                                ]
+                            }
+        ]
+,        "qualification": [
+                        {
+                            "key": "QualificationId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Degree",
+                            "label": "Degree",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Degree is required"
+                            ]
+                        },
+                        {
+                            "key": "University",
+                            "label": "University",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "University is required"
+                            ]
+                        },
+                        {
+                            "key": "Year",
+                            "label": "Year",
+                            "type": "dropdown",
+                                "valueId": "Value",
+                                "nameId": "Name",
+                                "contentId": "Name",
+                                "source": "Edm.Int32",
+                                "editable": true,
+                                "validators": [
+                                    "required",
+                                    "isNumber"
+                                ],
+                                "validationMessages": [
+                                    "Year is required"
+                                ]
+                            }
+        ]
+,        "payment": [
+                        {
+                            "key": "PaymentId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "TransactionId",
+                            "label": "TransactionId",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int64",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "TransactionId is required"
+                            ]
+                        },
+                        {
+                            "key": "Method",
+                            "label": "Method",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.PaymentMethod",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Method is required"
+                            ]
+                        },
+                        {
+                            "key": "Date",
+                            "label": "Date",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Date is required"
+                            ]
+                        },
+                        {
+                            "key": "Time",
+                            "label": "Time",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.TimeOfDay",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Time is required"
+                            ]
+                        },
+                        {
+                            "key": "Amount",
+                            "label": "Amount",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Amount is required"
+                            ]
+                        },
+                        {
+                            "key": "Status",
+                            "label": "Status",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.PaymentStatus",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Status is required"
+                            ]
+                        },
+                    {
+                        "key": "PaymentPaidBy",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "PaymentPaidTo",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "labtest": [
+                        {
+                            "key": "LabTestId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "TestName",
+                            "label": "TestName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "TestName is required"
+                            ]
+                        },
+                        {
+                            "key": "Instructions",
+                            "label": "Instructions",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Instructions is required"
+                            ]
+                        },
+                        {
+                            "key": "LabName",
+                            "label": "LabName",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "LabName is required"
+                                ]
+                            }
+        ]
+,        "slot": [
+                        {
+                            "key": "SlotId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Date",
+                            "label": "Date",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Date is required"
+                            ]
+                        },
+                        {
+                            "key": "StartTime",
+                            "label": "StartTime",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.TimeOfDay",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "StartTime is required"
+                            ]
+                        },
+                        {
+                            "key": "EndTime",
+                            "label": "EndTime",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.TimeOfDay",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "EndTime is required"
+                            ]
+                        },
+                    {
+                        "key": "SlotBookedAppointment",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "prescribeditem": [
+                        {
+                            "key": "PrescribedItemId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "ItemType",
+                            "label": "ItemType",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.PrescribedItemType",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ItemType is required"
+                            ]
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                        {
+                            "key": "Dosage",
+                            "label": "Dosage",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Dosage is required"
+                            ]
+                        },
+                        {
+                            "key": "NumberOfTimesInADay",
+                            "label": "NumberOfTimesInADay",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "NumberOfTimesInADay is required"
+                            ]
+                        },
+                        {
+                            "key": "BeforeOrAfterFood",
+                            "label": "BeforeOrAfterFood",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.BeforeOrAfter",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "BeforeOrAfterFood is required"
+                            ]
+                        },
+                        {
+                            "key": "Days",
+                            "label": "Days",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Days is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsSOS",
+                            "label": "IsSOS",
+                            "type": "check",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "IsSOS is required"
+                                ]
+                            }
+        ]
+}

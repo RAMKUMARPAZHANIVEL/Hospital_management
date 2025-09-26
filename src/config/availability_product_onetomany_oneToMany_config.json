@@ -1,0 +1,83 @@
+{
+
+"availability": [
+    {
+        "key": "AvailabiltyId",
+        "type": "keyid",
+        "UIComponentTitle": "Availability"
+    }
+    
+    ,{
+        "key": "Type",
+        "label": "Type",
+        "type": "radio",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "BookingType",
+        "enum": true,
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "DayOfWeek",
+        "label": "Day Of Week",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "Day",
+        "enum": true,
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "SpecificDate",
+        "label": "Specific Date",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+
+,"slotslots": [
+    {
+        "key": "SlotId",
+        "type": "keyid",
+        "UIComponentTitle": "Slots",
+        "child": true,
+        "parent": "slot",
+        "property": "Slots",
+        "values": []
+    }
+    ,{
+        "key": "Date",
+        "label": "Date",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "StartTime",
+        "label": "Start Time",
+        "type": "time",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "EndTime",
+        "label": "End Time",
+        "type": "time",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+}

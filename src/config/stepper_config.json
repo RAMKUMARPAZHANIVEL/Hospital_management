@@ -1,0 +1,182 @@
+{
+
+"doctor": [
+    {
+        "key": "DoctorId",
+        "type": "keyid",
+        "UIComponentTitle": "Doctor"
+    }
+        ,{
+        "key": "DoctorImage",
+        "label": "Doctor Image",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG,.PDF,.TXT,.DOC,.DOCX,.XLS,.XLSX",
+        "width": "30%",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "FullName",
+        "label": "Full Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Experience",
+        "label": "Experience",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "About",
+        "label": "About",
+        "type": "textarea",
+        "outline": false,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+         ,{
+            "key": "Gender",
+            "label": "Gender",
+            "type": "dropdown",
+            "valueId": "Value",
+            "nameId": "Name",
+            "contentId": "Name",
+            "source": "Gender",
+            "enum": true,
+            "editable": true,
+            "validators": [
+                "isNumber",
+                "required"
+            ]
+                            }
+    ,{
+        "key": "Email",
+        "label": "Email",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+                    ]
+                            }
+    ,{
+        "key": "PhoneNumber",
+        "label": "Phone Number",
+        "type": "text",
+        "editable": true,
+        "validators": [
+            "required"
+        ]
+                            }
+    ,{
+        "key": "DateOfBirth",
+        "label": "Date Of Birth",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Title",
+        "label": "Title",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "ConsultationFee",
+        "label": "Consultation Fee",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isFloat"
+            , "isPositive"
+            , "required"
+        ]
+                            }
+    ,{
+        "key": "DoctorSpeciality",
+        "label": "Speciality",
+        "type": "dropdown",
+        "valueId": "DocSpeId",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "Specialty",
+        "create": true,
+        "editable": true,
+        "validators": [
+            "required"
+                    ]
+                            }
+    ,{
+        "key": "Type",
+        "label": "Type",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "DoctorType",
+        "create": true,
+        "editable": true,
+        "validators": [
+            "required",
+            "isNumber"
+        ],
+        "validationMessages": [
+            "Type is required"
+        ]
+    }
+],
+"address": [
+      {
+        "key": "Country",
+        "label": "Country",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Address",
+        "label": "Address",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "City",
+        "label": "City",
+        "type": "text",
+        "editable": true,
+        "validators": [
+        ]
+                            }
+    ,{
+        "key": "PostalCode",
+        "label": "Postal Code",
+        "type": "text",
+        "editable": true,
+        "validators": [
+              "isNumber"
+            , "isPositive"
+        ]
+                            }
+     ,{
+        "key": "State",
+        "label": "State",
+        "type": "text",
+        "editable": true,
+        "validators": [
+        ]
+                            }
+]
+}
+

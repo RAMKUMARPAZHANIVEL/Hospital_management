@@ -1,0 +1,49 @@
+{
+
+"patient": [
+    {
+        "key": "PatientId",
+        "type": "keyid",
+        "UIComponentTitle": "Patient"
+    }
+],
+"MedicalInformation": [
+    {
+        "key": "PatientId",
+        "type": "keyid",
+        "UIComponentTitle": "Patient"
+    },
+      {
+        "key": "Allergies",
+        "label": "Allergies",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "FamilyMedicalHistory",
+        "label": "Family Medical History",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Medications",
+        "label": "Medications",
+        "type": "text",
+        "editable": true,
+        "validators": [
+        ]
+                            }
+    ,{
+        "key": "KnownMedicalConditions",
+        "label": "Known Medical Conditions",
+        "type": "text",
+        "editable": true,
+        "validators": [
+        ]
+                            }
+]
+}

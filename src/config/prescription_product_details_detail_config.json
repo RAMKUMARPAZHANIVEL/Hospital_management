@@ -1,0 +1,213 @@
+{
+   "Vitals": [
+     {
+        "key": "VitalId",
+        "type": "keyid",
+        "UIComponentTitle": "Vitals"
+    }
+        ,{
+        "key": "BodyTemperature",
+        "label": "Body Temperature",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "BloodPressure",
+        "label": "Blood Pressure",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+        ,{
+        "key": "OxygenSaturation",
+        "label": "Oxygen Saturation",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+            ,{
+        "key": "Height",
+        "label": "Height",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+            ,{
+        "key": "BloodGlucose",
+        "label": "Blood Glucose",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+            ,{
+        "key": "HeartRate",
+        "label": "Heart Rate",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+            ,{
+        "key": "RespiratoryRate",
+        "label": "Respiratory Rate",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+            ,{
+        "key": "Weight",
+        "label": "weight",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+            ,{
+        "key": "BodyMassIndex",
+        "label": "body Mass Index",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ],
+    "prescription": [
+        {
+            "key": "PrescriptionId",
+            "type": "keyid",
+            "UIComponentTitle": "Prescription"
+        }
+            ,{
+            "key": "ChiefComplaints",
+            "label": "Chief Complaints",
+            "type": "textarea",
+            "description": "Short notes on what the patient is experiencing",
+            "editable": true,
+            "validators": [
+                        ]
+                                }
+        ,{
+            "key": "Diagnosis",
+            "label": "Diagnosis",
+            "type": "textarea",
+            "description": "Enter or select condition being treated",
+            "editable": true,
+            "validators": [
+                        ]
+                                }
+        ,{
+            "key": "Investigations",
+            "label": "Investigations",
+            "type": "textarea",
+            "description": "Tests or scans advised (if any)",
+            "editable": true,
+            "validators": [
+                        ]
+                                }
+        ,{
+            "key": "Advice",
+            "label": "Advice",
+            "type": "textarea",
+            "description": "Enter advice to be followed by the patient",
+            "editable": true,
+            "validators": [
+                        ]
+                                }
+        ,{
+            "key": "NextSteps",
+            "label": "Next Steps",
+            "type": "textarea",
+            "description": "Follow-Up Date or consult with other doctors",
+            "editable": true,
+            "validators": [
+                        ]
+                                }
+        ,{
+            "key": "PersonalNotes",
+            "label": "Personal Notes",
+            "type": "textarea",
+            "description": "Notes only for your reference. This note wont be generated in the prescription.",
+            "editable": true,
+            "validators": [
+                        ]
+                                }
+    ],
+     "medication": [
+             {
+                "key": "MedicationId",
+                "type": "keyid",
+                "UIComponentTitle": "Medications",
+                "child": true,
+                "parent": "Prescription",
+                "property": "Meds",
+                "values": []
+            },
+            {
+                "key": "MedicationName",
+                "label": "Medication Name",
+                "type": "text",
+                "editable": true,
+                "validators": [
+                    "required"
+                ],
+                "validationMessages": [
+                    "MedicationName is required"
+                ]
+            },
+            {
+                "key": "Dosage",
+                "label": "Dosage",
+                "type": "text",
+                "editable": true,
+                "validators": [
+                    "required"
+                ],
+                "validationMessages": [
+                    "Dosage is required"
+                ]
+            },
+            {
+                "key": "Frequency",
+                "label": "Frequency",
+                "type": "text",
+                "editable": true,
+                "validators": [
+                    "required"
+                ],
+                "validationMessages": [
+                    "Frequency is required"
+                ]
+            },
+            {
+                "key": "Duration",
+                "label": "Duration",
+                "type": "text",
+                "editable": true,
+                "validators": [
+                    "required"
+                ],
+                "validationMessages": [
+                    "Duration is required"
+                ]
+            },
+            {
+                "key": "Notes",
+                "label": "Notes",
+                "type": "text",
+                    "editable": true,
+                    "validators": [
+                        "required"
+                    ],
+                    "validationMessages": [
+                        "Notes is required"
+                    ]
+                }
+        ]
+}
